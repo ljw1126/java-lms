@@ -19,7 +19,15 @@ public class Capacity {
         return capacity < other;
     }
 
+    public boolean isLessThan(Capacity other) { // 오버로딩
+        return capacity < other.capacity;
+    }
+
     public boolean isLessThanOrEqual(int other) { // 이하
         return capacity <= other;
+    }
+
+    public boolean isLessThanOrEqual(Capacity other) { // 오버로딩
+        return capacity <= other.capacity;
     }
 }

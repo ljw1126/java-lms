@@ -95,7 +95,7 @@ public class JdbcCoverImageRepository implements CoverImageRepository {
                 rs.getInt(4),
                 rs.getLong(5),
                 rs.getString(6),
-                EnableExtension.find(rs.getString(7)),
+                EnableExtension.from(rs.getString(7)),
                 rs.getString(8)
         );
     }

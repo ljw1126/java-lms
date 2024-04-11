@@ -19,11 +19,9 @@ public enum EnableExtension {
         return text;
     }
 
-    public static EnableExtension find(String other) {
-        String lowerCase = other.toLowerCase();
-
+    public static EnableExtension from(String other) {
         return Arrays.stream(values())
-                .filter(enableExtension -> enableExtension.text.equals(lowerCase))
+                .filter(enableExtension -> enableExtension.text.equalsIgnoreCase(other))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("지원하지 않는 확장자 입니다"));
     }

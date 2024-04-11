@@ -8,7 +8,7 @@ public class Enrollment extends BaseEntity {
     private Long id;
     private Long sessionId;
     private Long nsUserId;
-    private EnrollmentState state;
+    private EnrollmentState state = EnrollmentState.PENDING;
 
     public Enrollment(Long sessionId, Long nsUserId) {
         this(0L, sessionId, nsUserId, EnrollmentState.PENDING, LocalDateTime.now(), null);
@@ -22,7 +22,7 @@ public class Enrollment extends BaseEntity {
         this.id = id;
         this.sessionId = sessionId;
         this.nsUserId = nsUserId;
-        this.state = state == null ? EnrollmentState.PENDING : state;
+        this.state = state;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
     }

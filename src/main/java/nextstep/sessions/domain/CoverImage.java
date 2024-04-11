@@ -28,7 +28,7 @@ public class CoverImage {
     }
 
     public CoverImage(Long sessionId, int width, int height, long fileSize, String fileName, String extension, String filePath) {
-        this(0L, sessionId, width, height, fileSize, fileName, EnableExtension.find(extension), filePath);
+        this(0L, sessionId, width, height, fileSize, fileName, EnableExtension.from(extension), filePath);
     }
 
     public CoverImage(Long id, Long sessionId, int width, int height, long fileSize, String fileName, EnableExtension extension, String filePath) {
